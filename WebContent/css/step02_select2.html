@@ -9,9 +9,25 @@
         .container {
             background-color: beige;
         }
-        /*.container p =? .container의 자손중에서 p요소 선택*/
+        /*.div => bg-yellow 클래스를 찾아서 색을 입혀줘라
+            아이디는 한페이지 안에서 반드시 유일해야해 =>클래스는 중복허용이라 많이 써
+        
+        container p =? .container의 자손중에서 p요소 선택*/
         .container p {
             background-color: red;
+        }
+        /*.container>p =? .container의 자식중에서 p요소 선택*/
+        .container>p {
+            background-color: blue;
+        }
+        /*.container+p =? .container의 형제중에서 바로 인접한 p요소 선택
+                          위 아래 인접이어도 아래만 해당*/
+        .container+p {
+            background-color: violet;
+        }
+        /*.container~p =? .container의 형제중에서 모든 p요소 선택*/
+        .container+p {
+            background-color: yellow;
         }
     </style>
 </head>
