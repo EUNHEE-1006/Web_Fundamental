@@ -1,0 +1,40 @@
+<!--step03_array.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        //1. 배열 생성 및 할당
+        //const nums = new Array(1,2,3,4);
+        //const nums = Array(1,2,3,4);
+        const nums = [1,2,3,4];
+        const names = ['길동이', '철수', '영희'];
+
+        //2. In javaScript array, all variables can be allocated.
+        const random = [1, '길동이', false];
+
+        //3. change the array's length
+        nums.push(5); //case1 >> when we don't know that and add specific values
+        nums[99] = 100; //case2 >> when we know the index of array
+
+        //4. elements in array => string 
+        var numsToString = nums.join(',');
+        console.log(numsToString);
+
+        console.log(numsToString);
+        console.log(nums.length);
+
+        for(let i=0; i<nums.length; i++){
+            console.log(nums[i]);
+        }
+        for(let value of nums){
+            console.log(value);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

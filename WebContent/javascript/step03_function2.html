@@ -1,0 +1,57 @@
+<!--step03_function2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+       //생성자 함수
+       const Student = function(name, Korean, math){
+           this.name = name;
+           this.Korean= Korean;
+           this.math = math;
+           this.getSum = function(){
+               return this.Korean + this.math;
+           }
+       }
+
+       const s1 = new Student('박은희', 100, 100);
+       console.log(s1.name);
+       console.log(s1.Korean);
+       console.log(s1.math);
+       console.log(s1.getSum);
+       console.log(typeof s1); //why is this an object?
+       //객체생성시, 속성값을 모르는 경우는 생성자 함수를 사용한다. => typeof s1 :object
+       const s2 = {
+           "name": "박은희",
+           "Korean" : 100,
+           "math" : 100,
+           "getSum" : function(){
+               return this.Korean +this.math;
+           }
+       }
+       console.log(s1);
+       console.log(typeof s2);
+
+       //함수 확장(prototype) : javascript에는 상속이 없어. 
+       Student.prototype.getAvg =function() { 
+           return (this.Korea +this.math)/2;
+       }
+       console.log(s1.getAvg);
+
+       let sObj = "       This is the string     ";
+
+       String.prototype.trim = function(){
+           return this.replace(/(^\s*)|(\s*$)/gi,"")
+       }
+
+       let str = sObj.trim();
+       console.log("------" + str + "-----")
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
