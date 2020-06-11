@@ -21,7 +21,7 @@
        console.log(s1.Korean);
        console.log(s1.math);
        console.log(s1.getSum);
-       console.log(typeof s1); //why is this an object?
+       console.log(typ.eof s1); //why is this an object?
        //객체생성시, 속성값을 모르는 경우는 생성자 함수를 사용한다. => typeof s1 :object
        const s2 = {
            "name": "박은희",
@@ -44,6 +44,9 @@
 
        String.prototype.trim = function(){
            return this.replace(/(^\s*)|(\s*$)/gi,"")
+           //^ : 시작
+           //$ : 끝
+           //* : 문자가 공백으로 시작하거나(공백>=0)
        }
 
        let str = sObj.trim();
