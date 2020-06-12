@@ -19,12 +19,15 @@
 		   });
 		   */
 		   //$('#root').children().addClass('s');
-		   //$('.third').closest('div').addClass('s');
+		   //$('li').eq(0).closest('ul').addClass('s');
 		   //$('#root li').addClass('s');// 자식, 자손 모두 찾음
 		   //$('#root').find('li').addClass('s'); //바로 위랑 같은거!!
 		   //$('#root').find('li').first().addClass('s');
 		   //$('#root').find('li').first().next().addClass('s');
-		   $('#root').find('li').first().nextAll().addClass('s');
+		   //$('#root').find('li').first().nextAll().addClass('s');
+		   //$('#root').find('li').parent().addClass('s');
+		   $('#root').find('li').parents().addClass('s');
+		   $('#first').siblings().addClass('s');
 
 		
 		   

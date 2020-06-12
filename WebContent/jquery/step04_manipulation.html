@@ -15,10 +15,17 @@
           //$('p').after('<strong> Hi </strong>');
           //$('p').before('<strong> Hi </strong>');
           //$('p').text('제이쿼리');//insert only string, not tag
-          $('p').html('<strong>제이쿼리</strong>');//insert string with tag
-
-          let msg = $('p').html(); //
-          console.log(msg);
+          /*$('p').html('<strong>제이쿼리</strong>');//insert string with tag
+          let msg1 = $('p').html(); // 결과 : <strong>제이쿼리</strong>
+          let msg2 = $('p').text(); // 결과 : 제이쿼리
+          console.log(msg1);
+          console.log(msg2);*/
+         
+          $('p').wrap('<div/>'); //p tag 바깥에 div로 감쌌어
+          
+          $('p').remove(); //지우기
+          $('p').detach(); //지우기
+          $('p').empty(); //비우기
           
 		});
     </script>
@@ -35,6 +42,10 @@
 
 </head>
 <body>
-    <p>jQuery</p>
+    <p>jQuery</p> 
+    <div id ="aa">
+
+        </div>
+    </div>
 </body>
 </html>

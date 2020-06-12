@@ -1,0 +1,33 @@
+<!--step03_crossdomain.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossDomain</title>
+    <script type="text/javascript" src="../jquery/jquery-3.5.1.js"></script>
+    <!--조건 : url이 jsonp를 반드시 지원해줘야해 ==> openapi가 json객체에 함수를 포함해서 제공해줘야 하는데,
+               안그래서 jsonp 거의 못써-->
+    <script>
+        window.onload = function(){
+            loadScript('http://www.acornacademy.co.kr/blockchain/naver_json.jsp?call=test');
+        };
+        function test(obj){ //obj 안에 json이 들어옴!!
+        $('#sel').append(JSON.stringify(obj)); //obj =>string 
+        };
+        function loadScript(url){
+            var dScript = document.createElement('script');
+            dScript.src =url;
+            document.body.appendChild(dScript);
+        };
+    
+    </script>
+</head>
+<body>
+    <div id ="sel">
+
+    </div>
+    
+    
+</body>
+</html>
